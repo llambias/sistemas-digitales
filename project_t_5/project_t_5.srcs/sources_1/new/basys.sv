@@ -36,13 +36,14 @@ clock_divider clock_1(
     .out_8hz(led[2]),
     .out_4hz(led[3])
 );
+
 dis_controller disp(
     .dis_a(4'b0000),
     .dis_b(4'b0011),
     .dis_c(4'b0111),
-    .dis_d(4'b1111),
+    .dis_d(4'b0110),
     .an(an),
-    .clk(clk),
+    .clk(out_16hz),
     .seg(seg)
     );
  

@@ -33,8 +33,7 @@ module dis_controller(
     logic [1:0] display;
     logic [3:0] number;
     
-    always_ff @(posedge clk)
-        
+    always_ff @(posedge clk)    
          display <= display +1;
     
     
@@ -48,10 +47,10 @@ module dis_controller(
 
     always_comb
            case(display)
-              0: an = 0111;
-              1: an = 1011;
-              2: an = 1101;
-              3: an = 1110;
+              3: an = 0111; //izquierda
+              2: an = 1011;
+              1: an = 1101;
+              0: an = 1110; //derecha
            endcase
            
      always_comb
@@ -65,6 +64,6 @@ module dis_controller(
             7: seg = 8'b11111000;
             8: seg = 8'b10000000;
             9: seg = 8'b10010000;
-            default: seg = 8'b11000000;
+            default: seg = 8'b00000011;
          endcase
 endmodule

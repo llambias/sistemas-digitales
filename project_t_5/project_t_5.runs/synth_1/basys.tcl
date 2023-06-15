@@ -24,16 +24,16 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/project_t_5/project_t_5.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/project_t_5/project_t_5.xpr} [current_project]
+set_property webtalk.parent_dir {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {c:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/project_t_5/project_t_5.cache/ip} [current_project]
+set_property ip_output_repo {c:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
-  {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/project_t_5/project_t_5.srcs/sources_1/new/clock_divider.sv}
-  {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/project_t_5/project_t_5.srcs/sources_1/new/dis_controller.sv}
-  {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/project_t_5/project_t_5.srcs/sources_1/new/basys.sv}
+  {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/clock_divider.sv}
+  {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/dis_controller.sv}
+  {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/basys.sv}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -43,8 +43,8 @@ read_verilog -library xil_defaultlib -sv {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/project_t_5/project_t_5.srcs/constrs_1/new/const.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/project_t_5/project_t_5.srcs/constrs_1/new/const.xdc}}]
+read_xdc {{C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/constrs_1/new/const.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/constrs_1/new/const.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
