@@ -23,7 +23,7 @@
 module basys(
     input clk,
     input [1:0] sw,
-    output [3:0] led,
+    output [4:0] led,
     output [3:0] an,
     output [7:0] seg
     );
@@ -34,7 +34,8 @@ clock_divider clock_1(
     .mini_clock(led[0]),
     .out_16hz(led[1]),
     .out_8hz(led[2]),
-    .out_4hz(led[3])
+    .out_4hz(led[3]),
+    .out_2hz(led[4])
 );
 
 dis_controller disp(

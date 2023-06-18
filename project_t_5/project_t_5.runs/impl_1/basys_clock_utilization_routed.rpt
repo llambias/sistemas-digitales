@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Jun 15 12:29:40 2023
+| Date         : Sun Jun 18 01:21:58 2023
 | Host         : LAPTOP-S87UIBNV running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file basys_clock_utilization_routed.rpt
 | Design       : basys
@@ -69,9 +69,10 @@ Table of Contents
 +----------+-----------------+------------+-----------------+--------------+-------------+-----------------+--------------+-------+----------------------------+-------------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL        | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                 | Net                     |
 +----------+-----------------+------------+-----------------+--------------+-------------+-----------------+--------------+-------+----------------------------+-------------------------||
-| 0        | FDRE/Q          | None       | SLICE_X0Y13/AFF | X0Y0         |           2 |               1 |              |       | clock_1/clk_3hz_reg[24]/Q  | clock_1/clk_3hz_reg[24] - Static -
+| 0        | FDRE/Q          | None       | SLICE_X0Y11/AFF | X0Y0         |           2 |               1 |              |       | clock_1/clk_3hz_reg[24]/Q  | clock_1/clk_3hz_reg[24] - Static -
 | 1        | FDRE/Q          | None       | SLICE_X0Y22/BFF | X0Y0         |           1 |               2 |              |       | clock_1/clk_16hz_reg[21]/Q | clock_1/led_OBUF[1]     - Static -
-| 2        | FDRE/Q          | None       | SLICE_X1Y20/AFF | X0Y0         |           1 |               2 |              |       | clock_1/clk_8hz_reg[0]/Q   | clock_1/led_OBUF[2]     - Static -
+| 2        | FDRE/Q          | None       | SLICE_X1Y20/AFF | X0Y0         |           1 |               2 |              |       | clock_1/clk_8hz_reg/Q      | clock_1/led_OBUF[2]     - Static -
+| 3        | FDRE/Q          | None       | SLICE_X1Y19/AFF | X0Y0         |           1 |               2 |              |       | clock_1/clk_4hz_reg/Q      | clock_1/led_OBUF[3]     - Static -
 +----------+-----------------+------------+-----------------+--------------+-------------+-----------------+--------------+-------+----------------------------+-------------------------||
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)
@@ -86,7 +87,7 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   51 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X0Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   52 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1500 |    0 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
 | X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1500 |    0 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
