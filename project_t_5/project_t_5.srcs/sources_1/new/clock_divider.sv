@@ -78,11 +78,6 @@ module clock_divider(
         else 
             clk_1hz <= clk_1hz +1;
       
-     always_ff @(posedge clk_3hz[24])
-        if (reset==1 | (clk_1hz == 2'b10))
-            clk_1hz <= 0;
-        else 
-            clk_1hz <= clk_1hz +1;
       assign mini_clock = clk_1hz;
       always_comb 
         out_16hz = clk_16hz[21];

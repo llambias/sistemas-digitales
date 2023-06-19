@@ -68,6 +68,6 @@ module dis_controller(
             7: seg = 7'b0001111;
             8: seg = 7'b0000000;
             9: seg = 7'b0000100;
-            default: seg = 7'b1000000;
+            default: seg = 7'b111_1111;
          endcase
 endmodule

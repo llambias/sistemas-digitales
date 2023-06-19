@@ -28,10 +28,10 @@ module Ruleta(
     input clk_4,
     input clk_2,
     input clk_1,
-    output [2:0] ruleta
+    output [3:0] ruleta
     );
     logic [0:1] f;
-    logic valor;
+    logic [1:0] valor;
     
     always_ff @(negedge clk_16) 
         if (reset == 1) 

@@ -24,8 +24,8 @@ module basys(
     input clk,
     input [1:0] sw,
     output [4:0] led,
-    output [3:0] an,
-    output [7:0] seg
+    output logic [3:0] an,
+    output logic [7:0] seg
     );
 logic [3:0] conector;
 logic c_1;
@@ -33,6 +33,7 @@ logic c_2;
 logic c_4;
 logic c_8;
 logic c_16;
+logic [3:0] a;
 
 clock_divider clock_1(
     .main_clk(clk),
@@ -56,17 +57,22 @@ dis_controller disp(
 Ruleta r_1(
     .botton(sw[0]),
     .reset(sw[1]),
-    .clk_16(out_16hz),
-    .clk_8(out_8hz),
-    .clk_4(out_4hz),
-    .clk_2(out_2hz),
+    .clk_16(c16),
+    .clk_8(c8),
+    .clk_4(c4),
+    .clk_2(c2),
     .clk_1(c_1),
     .ruleta(conector));
     
+    //always_ff @(c_8)
+    //    a = a+1;
+        
     assign led[0] = c_1;
     assign led[1] = c_16;
     assign led[2] = c_8;
     assign led[3] = c_4;
     assign led[4] = c_2;
+    
+    
     
 endmodule

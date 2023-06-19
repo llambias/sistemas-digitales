@@ -24,3 +24,741 @@ reset_run impl_1 -prev_step
 launch_runs impl_1 -to_step write_bitstream -jobs 8
 [Sun Jun 18 14:46:02 2023] Launched impl_1...
 Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1107.270 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1760.000 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1760.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1760.000 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1887.941 ; gain = 1018.762
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-02:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1896.379 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+open_hw_target: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3089.590 ; gain = 1193.211
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 17:14:15 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 17:14:15 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 17:20:28 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 17:20:28 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 17:24:30 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 17:24:30 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Basys3-210183ACAE53A" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 17:32:18 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 17:32:18 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 17:36:42 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 17:36:42 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 18:04:30 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 18:04:30 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 18:11:27 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 18:11:27 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 18:14:21 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 18:14:22 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 18:16:42 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 18:19:29 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 18:19:29 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 18:22:01 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 18:22:01 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 18:28:09 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 18:28:09 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 18:31:24 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 18:31:24 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 19:47:02 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 19:47:02 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 19:51:57 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 19:51:57 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Basys3-210183ACAE53A" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 19:55:03 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 19:55:03 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 20:00:37 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 20:00:37 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 21:11:17 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 21:18:52 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+reset_run synth_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 21:28:42 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 21:28:42 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+ERROR: [Labtools 27-3165] End of startup status: LOW
+ERROR: [Common 17-39] 'program_hw_devices' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Basys3-210183ACAE53A" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 21:37:58 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 21:37:58 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+reset_run synth_1
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 21:39:16 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 21:39:16 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 21:42:05 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 21:42:05 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 22:08:55 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 22:08:55 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 22:11:47 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 22:11:47 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 22:12:06 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 22:12:06 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: basys
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3528.582 ; gain = 247.328
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'basys' [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/basys.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/clock_divider.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (1#1) [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/clock_divider.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'dis_controller' [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/dis_controller.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'dis_controller' (2#1) [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/dis_controller.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'Ruleta' [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/Ruleta.sv:23]
+WARNING: [Synth 8-567] referenced signal 'f' should be on the sensitivity list [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/Ruleta.sv:55]
+WARNING: [Synth 8-567] referenced signal 'f' should be on the sensitivity list [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/Ruleta.sv:61]
+WARNING: [Synth 8-567] referenced signal 'f' should be on the sensitivity list [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/Ruleta.sv:67]
+WARNING: [Synth 8-567] referenced signal 'f' should be on the sensitivity list [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/Ruleta.sv:73]
+WARNING: [Synth 8-89] always_ff on 'valor_reg' did not result in a flip-flop [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/Ruleta.sv:57]
+WARNING: [Synth 8-89] always_ff on 'valor_reg' did not result in a flip-flop [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/Ruleta.sv:63]
+WARNING: [Synth 8-89] always_ff on 'valor_reg' did not result in a flip-flop [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/Ruleta.sv:69]
+WARNING: [Synth 8-89] always_ff on 'valor_reg' did not result in a flip-flop [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/Ruleta.sv:75]
+INFO: [Synth 8-6155] done synthesizing module 'Ruleta' (3#1) [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/Ruleta.sv:23]
+WARNING: [Synth 8-689] width (4) of port connection 'ruleta' does not match port width (3) of module 'Ruleta' [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/basys.sv:59]
+WARNING: [Synth 8-3848] Net out_16hz in module/entity basys does not have driver. [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/basys.sv:48]
+WARNING: [Synth 8-3848] Net out_8hz in module/entity basys does not have driver. [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/basys.sv:55]
+WARNING: [Synth 8-3848] Net out_4hz in module/entity basys does not have driver. [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/basys.sv:56]
+WARNING: [Synth 8-3848] Net out_2hz in module/entity basys does not have driver. [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/basys.sv:57]
+WARNING: [Synth 8-3848] Net mini_clock in module/entity basys does not have driver. [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/basys.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'basys' (4#1) [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/basys.sv:23]
+WARNING: [Synth 8-3331] design Ruleta has unconnected port clk_8
+WARNING: [Synth 8-3331] design Ruleta has unconnected port clk_4
+WARNING: [Synth 8-3331] design Ruleta has unconnected port clk_2
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3569.367 ; gain = 288.113
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3588.289 ; gain = 307.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3588.289 ; gain = 307.035
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3588.289 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/constrs_1/new/const.xdc]
+Finished Parsing XDC File [C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/constrs_1/new/const.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3696.160 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3696.160 ; gain = 414.906
+11 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3696.160 ; gain = 414.934
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 22:22:42 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 22:22:42 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 22:32:07 2023] Launched synth_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/synth_1/runme.log
+[Sun Jun 18 22:32:07 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/basys.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 18 22:55:20 2023] Launched impl_1...
+Run output will be captured here: C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAE53A
