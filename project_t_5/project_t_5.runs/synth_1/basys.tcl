@@ -18,7 +18,10 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 2
+set_param synth.incrementalSynthesisCache {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/.Xil/Vivado-1944-LAPTOP-S87UIBNV/incrSyn}
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,6 +34,7 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo {c:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
+  {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/Ruleta.sv}
   {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/clock_divider.sv}
   {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/dis_controller.sv}
   {C:/Users/agull/Desktop/Agu/2023-1/Sistemas Digitales/sistemas-digitales/project_t_5/project_t_5.srcs/sources_1/new/basys.sv}

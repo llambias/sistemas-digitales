@@ -39,31 +39,35 @@ module dis_controller(
     
     always_comb 
         case(display)
-            0: number = dis_a;
-            1: number = dis_b;
-            2: number = dis_c;
-            3: number = dis_d;
+            0: begin
+                number = dis_a;
+                an = 1110;
+                end
+            1: begin 
+                number = dis_b;
+                an = 1101;
+                end
+            2: begin
+                number = dis_c;
+                an = 1011;
+                end
+            3: begin 
+                number = dis_d;
+                an = 0111;
+                end
          endcase   
-
-    always_comb
-           case(display)
-              3: an = 0111; //izquierda
-              2: an = 1011;
-              1: an = 1101;
-              0: an = 1110; //derecha
-           endcase
-           
+         
      always_comb
         case(number)
-            1: seg = 8'b11111001;
-            2: seg = 8'b10100100;
-            3: seg = 8'b10110000;
-            4: seg = 8'b10011001;
-            5: seg = 8'b10010010;
-            6: seg = 8'b10000010;
-            7: seg = 8'b11111000;
-            8: seg = 8'b10000000;
-            9: seg = 8'b10010000;
-            default: seg = 8'b00000011;
+            1: seg = 7'b1001111;
+            2: seg = 7'b0010010;
+            3: seg = 7'b0000110;
+            4: seg = 7'b1001100;
+            5: seg = 7'b0100100;
+            6: seg = 7'b0100000;
+            7: seg = 7'b0001111;
+            8: seg = 7'b0000000;
+            9: seg = 7'b0000100;
+            default: seg = 7'b1000000;
          endcase
 endmodule

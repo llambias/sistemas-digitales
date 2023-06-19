@@ -28,20 +28,54 @@ module Ruleta(
     input clk_4,
     input clk_2,
     input clk_1,
-    output [1:0] ruleta
+    output [2:0] ruleta
     );
-    logic f;
+    logic [0:1] f;
     logic valor;
     
     always_ff @(negedge clk_16) 
-        if (reset == 1)
+        if (reset == 1) 
+            begin
             valor <= 0;
-        else if (botton) 
+            f <= 0;
+            end
+        else if (botton & f==0) 
             valor <= valor +1;
-        else if (valor > 3'b101)
+        else if (f==0 & valor > 3'b101)
             valor <= 0;
+     
      always_ff @(negedge botton)
-         f = 1;
+         f =1;
+     
+     always_ff @(negedge clk_1)
+         if (f>=1) begin
+            f = f+1;
+         end
+            
+     always_ff @(negedge clk_16)
+        if (f == 0)
+            valor +=1;
+        else if (f== 1 & valor >6)
+            valor = 0;
+     
+     always_ff @(negedge clk_8)
+        if (f == 1)
+            valor +=1;
+        else if (f== 1 & valor >6)
+            valor = 0;
+     
+     always_ff @(negedge clk_4)
+        if (f == 2)
+            valor +=1;
+        else if (f== 1 & valor >6)
+            valor = 0;
+     
+     always_ff @(negedge clk_2)
+        if (f == 3)
+            valor +=1;
+        else if (f== 1 & valor >6)
+            valor = 0;
+     assign ruleta = valor;
      
         
 endmodule

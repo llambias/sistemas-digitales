@@ -27,25 +27,46 @@ module basys(
     output [3:0] an,
     output [7:0] seg
     );
-    
+logic [3:0] conector;
+logic c_1;
+logic c_2;
+logic c_4;
+logic c_8;
+logic c_16;
+
 clock_divider clock_1(
     .main_clk(clk),
     .reset(sw[1]),
-    .mini_clock(led[0]),
-    .out_16hz(led[1]),
-    .out_8hz(led[2]),
-    .out_4hz(led[3]),
-    .out_2hz(led[4])
+    .mini_clock(c_1),
+    .out_16hz(c_16),
+    .out_8hz(c_8),
+    .out_4hz(c_4),
+    .out_2hz(c_2)
 );
 
 dis_controller disp(
-    .dis_a(4'b0000),
-    .dis_b(4'b0011),
-    .dis_c(4'b0111),
-    .dis_d(4'b0110),
+    .dis_a(conector),
+    .dis_b(4'b0111),
+    .dis_c(4'b0010),
+    .dis_d(4'b0100),
     .an(an),
     .clk(out_16hz),
     .seg(seg)
     );
- 
+Ruleta r_1(
+    .botton(sw[0]),
+    .reset(sw[1]),
+    .clk_16(out_16hz),
+    .clk_8(out_8hz),
+    .clk_4(out_4hz),
+    .clk_2(out_2hz),
+    .clk_1(c_1),
+    .ruleta(conector));
+    
+    assign led[0] = c_1;
+    assign led[1] = c_16;
+    assign led[2] = c_8;
+    assign led[3] = c_4;
+    assign led[4] = c_2;
+    
 endmodule
